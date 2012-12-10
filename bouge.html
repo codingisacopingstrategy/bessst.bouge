@@ -1,0 +1,30 @@
+<head>
+  <title>bouge</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+        {{#each movables }}
+          {{> rule}}
+        {{/each}}
+    
+    {{#each movables}}
+      {{> movable}}
+    {{/each}}
+</template>
+
+<template name="rule">
+    <style>
+      #{{ _id }} {
+          left: {{ left }};
+          top: {{ top }};
+      }
+    </style>
+</template>
+
+<template name="movable">
+  <img src="{{ name }}" id="{{ _id }}"></object>
+</template>
