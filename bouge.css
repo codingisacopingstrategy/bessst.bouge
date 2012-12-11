@@ -1,6 +1,7 @@
 body {
     position: static;
+    overflow: visible;
 }
 img {
-    position: relative;
+    position: fixed;
 }

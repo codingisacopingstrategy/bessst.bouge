@@ -1,5 +1,5 @@
 <head>
-  <title>bouge</title>
+  <title>BESSST</title>
 </head>
 
 <body>
@@ -7,24 +7,12 @@
 </body>
 
 <template name="hello">
-        {{#each movables }}
-          {{> rule}}
-        {{/each}}
-    
     {{#each movables}}
       {{> movable}}
     {{/each}}
-</template>
-
-<template name="rule">
-    <style>
-      #{{ _id }} {
-          left: {{ left }};
-          top: {{ top }};
-      }
-    </style>
+    
 </template>
 
 <template name="movable">
-  <img src="{{ name }}" id="{{ _id }}"></object>
+  <img src="{{ name }}" id="{{ _id }}" style="left: {{ left }}px; top: {{ top }}px;">
 </template>
