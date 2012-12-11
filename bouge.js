@@ -19,7 +19,7 @@ if (Meteor.is_client) {
   };
   
   Meteor.startup(function () {
-      $("img").drags();
+      $(function() { $("img").draggable(); });
 /*    setTimeout( function() {
         console.log($("img").length);
             $("img").draggable( {
