@@ -24,7 +24,7 @@ if (Meteor.is_client) {
         Template.hello.rendered = function() {
             console.log($("img").length);
             $("img").draggable( {
-                stop: function(ev,ui){
+                drag: function(ev,ui){
                     // How could we insert 2 fields in 1 update?
                     Positions.update($(this).attr("id"), {$set: {top: ui.position.top }});
                     Positions.update($(this).attr("id"), {$set: {left: ui.position.left }});
