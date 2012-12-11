@@ -19,16 +19,15 @@ if (Meteor.is_client) {
   };
   
   Meteor.startup(function () {
-      $(function() { $("img").draggable(); });
-/*    setTimeout( function() {
-        console.log($("img").length);
+        Template.hello.rendered = function() {
+            console.log($("img").length);
             $("img").draggable( {
                 stop: function(ev,ui){
                     console.log(Positions.fin);
                     console.log("position:" + ui.position.left + "," + ui.position.top); 
-                } }
-            ); 
-        }, 1000 ); */
+                }
+            } );
+        };
   });
 }
 
